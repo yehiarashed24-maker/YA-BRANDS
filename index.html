@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>YA BRANDS</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: black;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background: url("photo6.jpeg") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: black;
+    color: white;
+}
+
+/* Products */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Hover effect 🔥 */
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>YA Brands</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <button>Shop Now</button>
+    </div>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+    <div class="card">
+        <img src="photo1.jpeg"
+        <h3>GUESS</h3>
+    </div>
+
+    <div class="card">
+        <img src="Photo2.jpeg">
+        <h3>ARMANI</h3>
+    </div>
+
+    <div class="card">
+        <img src="Photo4.jpeg">
+        <h3>ADIDAS  ORIGINALS </h3>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Copyright &copy; yehiaamin brands</p>
+</footer>
+
+</body>
+</html>
