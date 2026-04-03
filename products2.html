@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - yehiaamin brands</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Filter Buttons */
+.filters {
+    text-align: center;
+    margin: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Products */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Hover */
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Button */
+.card button {
+    padding: 8px 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Back link */
+.back {
+    text-align: center;
+    margin: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Our Products 🔥</h1>
+
+<!-- Filter -->
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('guess')">Guess</button>
+    <button onclick="filterProducts('armani')">Armani</button>
+    <button onclick="filterProducts('adidas')">Adidas</button>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+    <div class="card" data-brand="guess">
+        <img src="photo1.jpeg">
+        <h3>GUESS</h3>
+        <p>$50</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card" data-brand="armani">
+        <img src="photo2.jpeg">
+        <h3>ARMANI</h3>
+        <p>$80</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card" data-brand="adidas">
+        <img src="photo4.jpeg">
+        <h3>ADIDAS ORIGINALS</h3>
+        <p>$70</p>
+        <button>Buy</button>
+    </div>
+
+</div>
+
+<!-- Back -->
+<div class="back">
+    <a href="index.html">⬅ Back to Home</a>
+</div>
+
+<!-- JavaScript -->
+<script>
+function filterProducts(brand) {
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        if (brand === "all" || card.dataset.brand === brand) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

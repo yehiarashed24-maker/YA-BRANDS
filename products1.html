@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - yehiaamin brands</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Filter Buttons */
+.filters {
+    text-align: center;
+    margin: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    
+}
+
+/* Card */
+.card {
+    background: white;
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Hover */
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Button */
+.card button {
+    padding: 8px 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Back link */
+.back {
+    text-align: center;
+    margin: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Our Products 🔥</h1>
+
+<!-- Filter -->
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('shoes')">Shoes</button>
+    <button onclick="filterProducts('jackets')">Jackets</button>
+    <button onclick="filterProducts('hoodies')">Hoodies</button>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+    <div class="card" data-brand="shoes">
+        <img src="photo7.jpeg">
+        <h3>GUESS shoes</h3>
+        <p>2500 EGP</p>
+        <p>44, 45, 46</p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20shoes1">
+            <button>Buy</button>
+        </a>
+    </div>
+
+    <div class="card" data-brand="jackets">
+        <img src="photos8.jpeg">
+        <h3>GUESS jacket</h3>
+        <p>2000 EGP</p>
+        <p> L, XL, XXL</p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20jacket1">
+            <button>Buy</button>
+        </a>
+    </div>
+
+    <div class="card" data-brand="hoodies">
+        <img src="photo13.JPEG">
+        <h3>GUESS hoodie</h3>
+        <p>1000EGP</p>
+        <p> M, L, XL</p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20hoodie1">
+            <button>Buy</button>
+        </a>
+    </div>
+       
+    <div class="card" data-brand="shoes">
+        <img src="photo9.jpeg">
+        <h3>GUESS shoes</h3>
+        <p>2500 EGP</p>
+            <p>44, 45, 46</p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20shoes2">
+            <button>Buy</button>
+        </a>
+    </div>     
+    <div class="card" data-brand="jackets">
+        <img src="photo11.jpeg">
+        <h3>GUESS JACKET</h3>
+        <p>2000 EGP</p>
+        <p> L, XL, XXL</p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20jacket2">
+            <button>Buy</button>
+        </a>
+    </div>    
+    <div class="card" data-brand="hoodies">
+        <img src="photo12.jpeg">
+        <h3>GUESS hoodie</h3>
+        <p>1500 EGP</p>
+        <p> S, L </p>
+        <a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20hoodie2">
+            <button>Buy</button>
+        </a>
+    </div>    
+
+
+
+</div>
+<!-- Back -->
+<div class="back">
+    <a href="index.html">⬅ Back to Home</a>
+</div>
+
+<!-- JavaScript -->
+<script>
+function filterProducts(brand) {
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        if (brand === "all" || card.dataset.brand === brand) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
+
+  
