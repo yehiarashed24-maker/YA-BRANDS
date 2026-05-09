@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - yehiaamin brands</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.filters {
+    text-align: center;
+    margin: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+.card button {
+    padding: 8px 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.back {
+    text-align: center;
+    margin: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Our Products 🔥</h1>
+
+
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('men')">Men</button>
+    <button onclick="filterProducts('women')">Women</button>
+    <button onclick="filterProducts('kids')">Kids</button>
+   
+</div>
+
+
+<div class="products">
+
+    <div class="card" data-brand="men">
+        <img src="photo666.jpeg">
+        <h3>???</h3>
+        <p>???</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card" data-brand="women">
+        <img src="photo88.jpeg">
+        <h3>????</h3>
+        <p>???
+        </p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card" data-brand="kids">
+        <img src="photo66.jpeg">
+        <h3>????</h3>
+        <p>??</p>
+        <button>Buy</button>
+    </div>
+
+</div>
+
+
+<div class="back">
+    <a href="index.html">⬅ Back to Home</a>
+</div>
+
+
+<script>
+function filterProducts(brand) {
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        if (brand === "all" || card.dataset.brand === brand) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

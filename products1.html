@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Products - YA BRANDS</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+/* Title */
+
+h1{
+    text-align:center;
+    margin-top:20px;
+}
+
+/* Filter Buttons */
+
+.filters{
+    text-align:center;
+    margin:20px;
+}
+
+.filters button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+/* Products */
+
+.products{
+    display:grid;
+grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    padding:40px;
+    justify-items:center;
+}
+
+/* Card */
+
+.card{
+    background:white;
+    width:220px;
+    text-align:center;
+    padding:10px;
+    transition:0.3s;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* Hover */
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* Button */
+
+.card button{
+    padding:8px 15px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+/* Back */
+
+.back{
+    text-align:center;
+    margin:30px;
+}
+
+.back a{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.products{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.products{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Mens Products 🔥</h1>
+
+<div class="filters">
+
+<button onclick="filterProducts('all')">
+All
+</button>
+
+<button onclick="filterProducts('shoes')">
+Shoes
+</button>
+
+<button onclick="filterProducts('jackets')">
+Jackets
+</button>
+
+<button onclick="filterProducts('hoodies')">
+Hoodies
+</button>
+
+</div>
+
+<div class="products">
+
+<!-- Product 1 -->
+
+<div class="card" data-brand="shoes">
+
+<img src="photos/photo7.jpeg">
+
+<h3>GUESS Shoes</h3>
+
+<p>2500 EGP</p>
+
+<p>44, 45, 46</p>
+
+<a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20shoes">
+
+<button>
+Buy
+</button>
+
+</a>
+
+</div>
+
+<!-- Product 2 -->
+
+<div class="card" data-brand="jackets">
+
+<img src="photos/photo11.jpeg">
+
+<h3>GUESS Jacket</h3>
+
+<p>2000 EGP</p>
+
+<p>L, XL, XXL</p>
+
+<a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20jacket">
+
+<button>
+Buy
+</button>
+
+</a>
+
+</div>
+
+<!-- Product 3 -->
+
+<div class="card" data-brand="hoodies">
+
+<img src="photos/photo13.JPEG">
+
+<h3>GUESS Hoodie</h3>
+
+<p>1000 EGP</p>
+
+<p>M, L, XL</p>
+
+<a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20hoodie">
+
+<button>
+Buy
+</button>
+
+</a>
+
+</div>
+
+<!-- Product 4 -->
+
+<div class="card" data-brand="shoes">
+
+<img src="photos/photo9.jpeg">
+
+<h3>GUESS Shoes</h3>
+
+<p>2500 EGP</p>
+
+<p>44, 45, 46</p>
+
+<a href="//wa.me/201060076900?text=I%20want%20to%20buy%20the%20guess%20shoes2">
+
+<button>
+Buy
+</button>
+
+</a>
+
+</div>
+<div class="card" data-brand="jackets">
+
+<img src="photos/photos8.jpeg">
+
+<h3>GUESS Jacket</h3>
+
+<p>3000 EGP</p>
+
+<p>L, XL</p>
+
+<a href="//wa.me/201060076900">
+
+<button>
+Buy
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="back">
+
+<a href="index.html">
+⬅ Back to Home
+</a>
+
+</div>
+
+<script>
+
+function filterProducts(brand){
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+if(
+brand === "all" ||
+card.dataset.brand === brand
+){
+
+card.style.display = "block";
+
+}
+
+else{
+
+card.style.display = "none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
